@@ -46,17 +46,17 @@ function ContactUs(){
                     <div className="right">
                         <div className="contact-form">
                             <input type="text" required />
-                            <span>Full Name</span>
+                            <span className='placeholder'>Full Name</span>
                         </div>
 
                         <div className="contact-form">
                             <input type="E-mail" required />
-                            <span>E-mail Id</span>
+                            <span className='placeholder'>E-mail Id</span>
                         </div>
                         <div className="contact-form">
                             <textarea name="text">
                             </textarea>
-                            <span> Type your Message....</span>
+                            <span className='placeholder'> Type your Message....</span>
                         </div>
 
                         <div className="contact-form">
