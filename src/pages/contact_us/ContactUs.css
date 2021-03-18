@@ -1,44 +1,52 @@
-.container{
-    width: 90%;
-    margin: auto;
-}
-
-header h1{
-    font-size: 30px;
-    text-align: center;
-}
-
-header p{
-    text-align: center;
-    font-size: 16px;
-}
-
-.empty{
-    width: 100%;
+.contact-us{
+    background-image: url("../../assets/background_img.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    width: 100vw;
+    color: white;
+    z-index: 10;
 }
 
-.content section{
-    margin-top: 8vh;
-    margin-left: 20vh;
-}
-.content-form{
-    /*margin-top: 7rem;*/
+.contact-us-container{
+    width: 85vw;
+    margin: auto;
+    display: flex;
 }
 
-.content-form section h2{
-    display: inline;
-    margin-left: 10px;
+.contact-us-header{
+    height: 15vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
-.content-form section p{
-    margin-left: 55px;
+.contact-us-header h1{
+    margin: 20px 0;
 }
+
+.contact-us-left{
+    width: 30%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-us-right{
+    width: 70%;
+    height: 80vh;
+}
+
+.contact-us-left section{
+    margin: 25px 25px;
+    width: 100%;
+    text-align: center;
+}
+
 section i{
     border-radius: 50%;
     width: 45px;
@@ -49,14 +57,20 @@ section i{
     padding-top: 7px;
 }
 
+section p:hover{
+    color: dodgerblue;
+    cursor: pointer;
+}
+
 .form{
     display: flex;
     position: absolute;
-    top: 170px;
+    top: 180px;
     left: 0;
-    margin-left: 50%;
+    margin-left: 45%;
     justify-content: center;
     align-items: center;
+
 }
 
 .form .placeholder{
@@ -72,6 +86,7 @@ section i{
     padding: 10px;
     font-size: 18px;
     border-bottom: 2px solid #fff;
+    color: white;
 }
 .form .contact-form input ~ span{
     position: absolute;
@@ -102,6 +117,7 @@ input:-webkit-autofill:active  {
     border-bottom: 2px solid white;
     padding-left: 10px;
     padding-top: 10px;
+    color: white;
 }
 .form .contact-form textarea ~ span
 {
@@ -127,51 +143,68 @@ input:-webkit-autofill:active  {
 
 .form .contact-form input[type=submit]:hover{
     background-color: transparent;
-    color: dodgerblue;
+    color: white;
 }
+
 .media{
     position: absolute;
     top: 85vh;
-    right: 10vh;
+    right: 20vh;
     display: flex;
     list-style: none;
 }
 .media li{
     margin: 20px 30px;
 }
+
 @media screen and (max-width: 900px){
-    body{
-        background-repeat: repeat-y;
-        overflow: auto;
+    .contact-us-container{
+        background-image: url("../../assets/background_img.jpg");
+        background-size: cover;
+        height: 120vh;
+        width: 100vw;
     }
-    header{
-        position: absolute;
-        left: 0;
-        top: 20%;
+
+    .contact-us-left{
+        margin-top: 35px;
+        height: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
         width: 100%;
     }
-    .empty{
-        height: 210vh;
+
+    .contact-us-left section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 120px;
     }
+
+    .contact-us-left section i{
+        padding-top: 10px;
+    }
+    .contact-us-left section{
+        margin: 50px;
+        width: 100vw;
+        font-size: 12px;
+    }
+
     .form{
-        position: absolute;
-        top: 100vh;
-        margin-left: 10%;
+        top: 350px;
+        left: -200px;
     }
-    .content-form{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0;
-        margin-top: 53vh;
-        margin-left: 10vh;
-    }
-    .content section{
-        margin-top: 0;
-        margin-left: 0;
-    }
+
     .media{
-        position: absolute;
-        top: 190vh;
-        right: 30px;
+        top: 120vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        right: 25%;
     }
+
+    .form .contact-form input[type=submit]{
+        margin-top: 10px;
+    }
+
 }
